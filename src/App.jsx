@@ -1,7 +1,6 @@
 import React from "react";
 import "./App.css";
 
-// Import Icon dari react-icons
 import {
   GiGamepad,
   GiGameConsole,
@@ -9,21 +8,11 @@ import {
   GiRocket,
 } from "react-icons/gi";
 
-// Import Components Card Background
 import CardBackground from "./components/card/CardBackground";
-
-// Import Components Content
 import Content from "./components/content/Content";
-
-// Import Components Game 1
 import Materi1 from "./components/materi/Materi1.jsx";
-
-// Import Components Game 1
 import Materi2 from "./components/materi/Materi2.jsx";
-
-// Import Image untuk mengamgili gambar
 import Image from "./assets/Image.jsx";
-
 import Game1 from "./components/game/Game1.jsx";
 import Game2 from "./components/game/Game2.jsx";
 
@@ -83,24 +72,18 @@ function App() {
             Unleash Your Playful Spirit at Atma Jaya Game Center
           </p>
         </div>
-
-        {/* Icon Untuk hiasan */}
         <GiGamepad className="iconGamePad" />
         <GiGameConsole className="iconGameConsole" />
         <GiHealthPotion className="iconHealthPotion" />
         <GiRocket className="iconRocket" />
       </div>
 
-      {/* Container bawah */}
       <div className="container container-content">
         <div>
           <h1 className="judulContent">Content Game</h1>
-          {/* Custom Component untuk memanfaatkan children pada component*/}
           <CardBackground>
             <div className="row align-item-center kolom">
-              {/* Map untuk menampilkan semua data content */}
               {content.map((item, index) => (
-                // Custom Component untuk menampilkan data content
                 <Content
                   key={index}
                   title={item.title}
@@ -114,7 +97,6 @@ function App() {
           </CardBackground>
         </div>
       </div>
-      {/* Container Untuk Game 1 */}
       <div className="container container-content">
         <h1 className="judulContent">Materi 1</h1>
         <CardBackground>
@@ -122,7 +104,6 @@ function App() {
         </CardBackground>
       </div>
 
-      {/* Container Untuk Game 2 */}
       <div className="container container-content">
         <h1 className="judulContent">Materi 2</h1>
         <CardBackground>
